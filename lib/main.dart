@@ -147,8 +147,98 @@ class _PageThreeState extends State<PageThree> {
               ],
             ),
           ),
-          Row(
-            children: <Widget>[],
+          Container(
+            padding: EdgeInsets.only(top: 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.linear_scale,
+                        size: 32.0,
+                        color: Colors.lightGreen,
+                      ),
+                      Text(
+                        ' 234',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 20.0,
+                            color: Colors.black87),
+                      ),
+                      Text(
+                        ' Km',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 18.0,
+                            color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.timer,
+                        size: 32.0,
+                        color: Colors.lightGreen,
+                      ),
+                      Text(
+                        ' 450+',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 20.0,
+                            color: Colors.black87),
+                      ),
+                      Text(
+                        ' h',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 18.0,
+                            color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.crop_square,
+                        size: 32.0,
+                        color: Colors.lightGreen,
+                      ),
+                      Text(
+                        ' 1,5',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 20.0,
+                            color: Colors.black87),
+                      ),
+                      Text(
+                        ' t',
+                        style: TextStyle(
+                            fontFamily: 'Google',
+                            fontSize: 18.0,
+                            color: Colors.black38),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 32.0),
+              decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(40.0),
+                      topRight: const Radius.circular(40.0))),
+            ),
           )
         ],
       ),
