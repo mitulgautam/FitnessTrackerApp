@@ -148,6 +148,7 @@ class _PageThreeState extends State<PageThree> {
             ),
           ),
           Container(
+            color: Colors.white,
             padding: EdgeInsets.only(top: 16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
