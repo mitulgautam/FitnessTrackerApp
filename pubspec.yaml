@@ -59,7 +59,9 @@ flutter:
     - family: Google
       fonts:
         - asset: fonts/GoogleSans.ttf
-        # - asset: fonts/Gilory-ExtraBold.otf
+    - family: Reg
+      fonts:
+        - asset: fonts/GoogleSansRegular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

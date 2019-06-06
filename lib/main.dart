@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() => runApp(MyApp());
 final _name = 'Mitul';
@@ -38,7 +39,7 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         title: Text(
           'Trackr',
-          style: TextStyle(color: Colors.black54),
+          style: TextStyle(color: Colors.teal, fontFamily: 'Google'),
         ),
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -142,7 +143,7 @@ class _PageThreeState extends State<PageThree> {
                 CircleAvatar(
                   radius: 32.0,
                   backgroundImage: NetworkImage(
-                      'https://lh3.googleusercontent.com/pV0mhrGpuOHpnR6qesn9-NW1ejb_NK04loHb9EkRWrFGTWORxtGawjDUw1VEvtNXuARXAuqWemksLiGQARKOMJbS8EQt5O1XFF-QL6VM1RwFxXXXq4diiPMyISCmiR-6KoHWBdXFLWPWt1cN8uWOfBc2gsKk8lVYYMszB8EFwBfr6w9YMmvyaRsWT_E256BGBKQ5iSMa5jY5ynLpxYfE7dtbpGLBPoRStZZT0zVlr40WkiOSy2uu6ppR05jjB1Aue3SWmSi43s2LFD1G1YsX2HhaY6VgS-oDCZb5xY3jU9f3xVepGcIjdqvOqh4rDk4Cz5fjSYobu_d621Z5r90CJ0CIg2z8apM9HufhiQLygrYU8CKJ5GimFrsaGweeI8x0Nma1Dn-pV7b_j_fPok4KmIatZUlgGNufKM0yUjIXC1aQy0YkeZ9Kh7TsG4VDz40MeXt93o8YS3nWXMPmsO3fqxN0uAzgIkeg7wVHaTx-FQzEWUJI0ZsU7APXwTdveoZkW9ue_nHclAvvKRQIHsMZivOIPeyJnU9sqnCBHfbjilOsYe_9q06omwjYC5NEmFGk3wtfUJtedKzZROjQmXQtXgYoxXT4BdhC4rvyeLwfrhfrKtW0FokFfJBOf7qIZdXkuiCTsf8V-fPo1PvXD53rUynm_iIS-lsh=s881-no'),
+                      'https://lh3.googleusercontent.com/VC6GeWxCvo7GSJGd-MO9Q3v2ep1ohYGRGwH8LT1_WZHG8N87g_heXu9xZYqDK-PaY4-OSdprM9hfc6kaJBvgQzGuM_dOuGN9INZt7whtx0ByVqQM70z6kIQvgYV3KoLeTKJcDedrkdmdwOPG0Eia_23Z_E34QVckgAnUaqFyAmagyi9MBov11-3WDlDYbCosULWO2EXQz8R07l1m36jpN6hxrwkGqFhNu0X3xvyzxY68FKpZJ6KpsBxBKMYbkHzNeke5nVKwpktlKaUnqtz4jPh6Q-6tjD_355w4_fxB5e7lK2QekU-pAoppZ3Q8hG4BTLCh5FAhfDC93_lW2b7RaCNgS9sqszGDZj9v4bY3z1d8bfhfEN-JsAxBcpHJuIajaxu4ywDSMQgPV2cQ8zs-x5JHopGK3-IlzmZspVfvfbA-G2jItkSjdtpN8El6cR_p8ZzXrAvcgpwsgx8Szd3ihFeY0RXCGCSm6skS_0GQo7JEW_LrMGIKIHl75D6TdgJs3q04I4pI3_sXjcLwECcZPXSdmn0ixqRquSIOl2iSiky_zgw-Gk13-8yWlKpRYIAuzLxGLhsCMlL_K2XvupQVWbGDFnWFusYq6ZCe4O4T5JbpJBoo9smkPPDrvJChm6XTcaF3Bjt2dSRuoYOXS5oLb8t3fpmeplTd=s1003-no'),
                 ),
               ],
             ),
@@ -233,14 +234,94 @@ class _PageThreeState extends State<PageThree> {
           ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.all(16.0),
+              width: MediaQuery.of(context).size.width - 32,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Activity this month',
+                      style: TextStyle(fontSize: 24.0, fontFamily: 'Google')),
+                  Container(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Text('70429',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 64.0,
+                              fontFamily: 'Google',
+                            )),
+                        Text('Kcal',
+                            style: TextStyle(
+                                fontSize: 28.0,
+                                color: Colors.black26,
+                                fontFamily: 'Google'))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 16.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text('Distance',
+                                style: TextStyle(
+                                    fontSize: 28.0,
+                                    color: Colors.black26,
+                                    fontFamily: 'Google')),
+                            Text('1744 Km',
+                                style: TextStyle(
+                                    fontSize: 36.0,
+                                    color: Colors.black87,
+                                    fontFamily: 'Google')),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text('Duration',
+                                style: TextStyle(
+                                    fontSize: 28.0,
+                                    color: Colors.black26,
+                                    fontFamily: 'Google')),
+                            Text('14+ h',
+                                style: TextStyle(
+                                    fontSize: 36.0,
+                                    color: Colors.black87,
+                                    fontFamily: 'Google')),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  ListView(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      Card(
+                        child: Container(
+                          width: 64.0,
+                          height: 128.0,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               margin: EdgeInsets.only(top: 32.0),
               decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Colors.white,
                   borderRadius: new BorderRadius.only(
                       topLeft: const Radius.circular(40.0),
                       topRight: const Radius.circular(40.0))),
             ),
-          )
+          ),
         ],
       ),
     );
