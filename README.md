@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/mitulgautam/FitnessTrackerApp/master/assets/screenshot.png?raw=true)
+
 # fitness_tracker
 
 A new Flutter project.
